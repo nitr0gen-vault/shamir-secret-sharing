@@ -1,0 +1,36 @@
+{
+  "name": "@nitr0gen/shamir-secret-sharing",
+  "version": "1.0.0",
+  "description": "Implementation of Shamir Secret Sharing",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "ts-node test/",
+    "build:commonjs": "rimraf lib && tsc --target es2020 --outDir lib --module commonjs --declaration",
+    "build:es": "rimraf es && tsc --target es2020 --outDir es --module es6",
+    "build": "npm run build:commonjs && npm run build:es",
+    "ts": "ts-node src/",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitr0gen-vault/shamir-secret-sharing.git"
+  },
+  "author": "Adam Walker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nitr0gen-vault/shamir-secret-sharing/issues"
+  },
+  "homepage": "https://github.com/nitr0gen-vault/shamir-secret-sharing#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "jsnext:main": "./es/index.js",
+  "module": "./es/index.js"
+}

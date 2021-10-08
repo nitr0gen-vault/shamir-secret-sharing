@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {    
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "downlevelIteration": true, 
+    "removeComments": true   
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
